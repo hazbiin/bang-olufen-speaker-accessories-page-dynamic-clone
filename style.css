@@ -1,0 +1,348 @@
+@font-face {
+    font-family:'beo-medium-font' ;
+    src: url('./assets/fonts/beosuprememedium.woff2');
+}
+@font-face {
+    font-family:'beo-regular-font';
+    src: url('./assets/fonts/beosupremeregular.woff2');
+}
+@font-face {
+    font-family:'icon-font' ;
+    src: url('./assets/fonts/icons.ttf');
+}
+
+
+/* ------------------------base-styles-------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+body{
+    font-family: 'beo-regular-font';
+    color: rgb(25,24,23);
+    margin-bottom: 5000px;
+}
+button{
+    cursor: pointer;
+    border: none;
+    font-family: 'beo-regular-font';
+}
+a{
+    text-decoration: none;
+    color: rgb(85,85,85);
+    cursor: pointer;
+}
+img{
+    max-width: 100%;
+}
+
+
+
+/* --------------------------------------header-styles---------------------------------------- */
+header{
+    display: flex;
+    align-items: center;
+    height: 85px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 1rem;
+    /* position: relative; */
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+.menu-btn{
+    background: none;
+    height: 18px;
+    width: 76px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+}
+em{
+    display: block;
+    position: relative;
+    text-indent: -999px;
+    width: 20px;
+    height: 1.5px;
+    margin-top: -9px;
+    margin-right: 11px;
+    background: rgb(25,24,23);
+}
+em::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgb(25,24,23);
+    position: absolute;
+    left: 0px;
+    top: 8px;
+}
+.sm-font-style{
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.1px;
+    font-weight: 400;
+    color: rgb(25,24,23);
+}
+.header-middle-section{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    z-index: -1;
+}
+.logo-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    width: 42px;
+    height: 42px;
+    max-height: 80px;
+    max-width: 100%;
+    display: flex;
+    margin: auto;
+}
+.logo-text{
+    width: 42px;
+    height: 14px;
+    font-size: 9px;
+    text-align: center;
+    margin-top: 4px;
+}
+.header-right-section{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    height: 100%;
+}
+.cart-icon{
+    width: 32px;
+    height: 32px;
+}
+.header-right-section-right{
+    display: none;
+}
+.header-right-seciton-left{
+    width: 32px;
+    height: 32px;
+}
+
+
+/* -----------------------------------------------main-layout-styles--------------------------------------- */
+main{
+    padding-top: 80px;
+}
+.main-layout{
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.filtered-section-heading{
+    display: flex;
+    align-items: center;
+    padding: 16px 1rem;
+    width: 100%;
+    max-width: 1512px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.heading-content{
+    flex: 0 0 auto;
+    max-width: 100%;
+    flex-basis: 100%;
+    display: flex;
+    align-items: center;
+}
+.md-font-style{
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 400;
+    font-family: 'beo-regular-font';
+}
+.filter-count-container{
+    margin-left: 16px;
+    width: 24px;
+    height: 18px;
+    padding-bottom: 25px;
+}
+.filter-count{
+    margin: 0px 0px 20px;
+    letter-spacing: 2px;
+    font: 400 0.625rem / 1.125rem 'beo-regular-font';
+}
+
+/* --------------------------------------------------------- */
+.categories-list-container{
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+.categories-scrollable-container{
+    max-width: 1512px;
+    margin: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+.tab-list{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 32px 0px;
+    padding-top: 16px;
+    padding-bottom: 8px;
+    list-style: none;
+    position: relative;
+}
+.gradient-left{
+    height: 24px;
+    min-width: 16px;
+    position: sticky;
+    left: 0px;
+    z-index: 1;
+    background: linear-gradient(45deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.gradient-right{
+    height: 24px;
+    min-width: 50px;
+    position: sticky;
+    right: 0px;
+    background: linear-gradient(270deg, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.nav-indicator{
+    background: rgb(25,24,23);
+    height: 2px;
+    
+    position: absolute;
+    /* bottom: 11px; */
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+
+    /* --------both are chaingin dynamically*/
+    /* left: 826px; */
+    /* width: 170px; */
+}
+.tab-list-item{
+    margin-right: 32px;
+    margin-bottom: 3px;
+    overflow: hidden;
+    flex-shrink: 0;
+    position: relative;
+}
+/* .tab-list-item:last-child{
+    margin-right: 0px;
+} */
+.mr-0{
+    margin-right: 0px;
+}
+.tab-link{
+    text-align: left;
+    letter-spacing: 2px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.nav-text-style{
+    font-size: 0.75rem;
+    min-height: 26px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 2px;
+    line-height: 1.125rem;
+    text-align: left;
+    text-transform: uppercase;
+    color: rgb(25,24,23);
+}
+
+@media  (min-width: 768px) {
+    header{
+        height: 82px;
+        padding: 0px 24px;
+    }
+    .md-font-style{
+        font-size: 1.375rem;
+        line-height: 2rem;
+    }
+    .filtered-section-heading{
+        padding: 24px 1rem;
+    }
+
+    .tab-list-item{
+        margin-right: clamp(16px, 3vw, 48px);
+    }
+    .mr-0{
+        margin-right: 48px;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    header{
+        height: 116px;
+        padding: 0px 36px;
+    }
+    .logo{
+        width: 50px;
+        height: 50px;
+        max-height: 80px;
+    }
+    .logo-text{
+        width: 50px;
+        height: 16px;
+    }
+
+    .header-right-section-right{
+        display: flex;
+    }
+    .header-btn-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header-logo-btn{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-right: 8px;
+        background: none;
+        height: 32px;
+        min-width: 32px;
+        width: auto;
+    }
+
+    .filtered-section-heading{
+        padding: 40px;
+    }
+    .md-font-style{
+        font-size: 1.5rem;
+        line-height: 2.25rem
+    }
+    .filter-count-container{
+        padding-bottom: 20px;
+    }
+
+    .gradient-left{
+        min-width: 36px;
+    }
+}
