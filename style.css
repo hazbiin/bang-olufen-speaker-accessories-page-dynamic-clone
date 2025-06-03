@@ -56,6 +56,7 @@ header{
     top: 0px;
     left: 0px;
     z-index: 100;
+    background-color: #fff;
 }
 .menu-btn{
     background: none;
@@ -189,12 +190,12 @@ main{
     letter-spacing: 2px;
     font: 400 0.625rem / 1.125rem 'beo-regular-font';
 }
-
 /* --------------------------------------------------------- */
 .categories-list-container{
     max-width: 100%;
     width: 100%;
     margin: 0 auto;
+    background: #fff; 
 }
 .categories-scrollable-container{
     max-width: 1512px;
@@ -370,9 +371,6 @@ main{
 }
 
 
-
-
-
 .product-card-info{
     display: flex;
     justify-content: space-between;
@@ -428,12 +426,14 @@ main{
 }
 .sign-up-section-contents-container{
     display: flex;
-   flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 .sign-up-section-content{
+    flex: 0 0 auto;
     flex-basis: 100%;
     max-width: 100%;
-    flex: 0 0 auto;
+    padding-right: .375rem;
+    padding-left: .375rem;
 }
 .email-icon{
     width: 90px;
@@ -500,7 +500,6 @@ footer{
 .footer-contents-container{
     padding: 0px 20px;
 }
-
 .row{
     display: flex;
     flex-direction: row;
@@ -594,16 +593,21 @@ footer{
     font-size: 16px;
     line-height:18.4px;
 }
-.country-local-text{
+.country-locale-text{
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.1px;
+     font-weight: 700;
+    text-align: left;
+    font-family: 'beo-regular-font';
+}
+.lang-locale-text{
     font-size: 0.75rem;
     line-height: 1.25rem;
     letter-spacing: 0.1px;
     font-weight: 400;
     text-align: left;
     font-family: 'beo-regular-font';
-}
-.fw-700{
-    font-weight: 700;
 }
 .footer-bottom{
     margin-top: 120px;
@@ -613,7 +617,6 @@ footer{
     letter-spacing: 0.1px;
     font-weight: 400;
 }
-
 @media  (min-width: 768px) {
     header{
         height: 82px;
@@ -633,15 +636,54 @@ footer{
     .mr-0{
         margin-right: 48px;
     }
-
     .empty-space-2{
         height: 48px;
     }
     .sign-up-button-wrapper{
         padding-top: 32px;
     }
+    .sign-up-section-content{
+        padding-right: .75rem;
+        padding-left: .75rem;
+    }
+    .email-section-text{
+        letter-spacing: 1.7px;
+    }
+    .footer-contents-container{
+        padding: 0px 16px;
+    }
+    .row{
+        margin-left: -.75rem;
+        margin-right: -.75rem;
+    }
+    .footer-list-section{
+        flex-basis: 83.33333333%;
+        max-width: 83.33333333%;
+        padding-right: .75rem;
+        padding-left: .75rem;
+    }
+    .footer-accordion{
+        flex-basis: 41.66666667%;
+        max-width: 41.66666667%;
+        margin-top: 30px;
+        margin-right: 30px;
+        padding-right: .75rem;
+        padding-left: .75rem;
+    }
+    .accordion-head{
+        letter-spacing: 1.7px;
+    }
+    .footer-location-section{
+        flex-basis: 33.33333333%;
+        max-width: 33.33333333%;
+        padding-right: .75rem;
+        padding-left: .75rem;
+    }
+    .country-locale-text{
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+    }
 }
-
 @media (min-width: 1024px) {
     header{
         height: 116px;
@@ -717,5 +759,60 @@ footer{
         font-size: 0.875rem;
         line-height: 1.5rem;
         letter-spacing: 1.7px;
+    }
+    .footer-container{
+        padding-left: 36px;
+        padding-right: 36px;
+    }
+    .footer-contents-container{
+        padding: 0px 48px;
+    }
+    .row{
+        margin-left: -.688rem;
+        margin-right: -.688rem;
+    }
+    .footer-list-section{
+        padding-right: .688rem;
+        padding-left: .688rem;
+    }
+    .footer-accordion{
+        padding-right: .688rem;
+        padding-left: .688rem;
+    }
+    .accordion-head{
+        font-size: 0.875rem;
+        line-height: 1.5rem;
+    }
+}
+@media (min-width: 1200px) {
+    .row{
+        margin-left: -1rem;
+        margin-right: -1rem;
+    }    
+    .sign-up-section-content{
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .footer-list-section{
+        order: unset;
+        flex-basis: 75%;
+        max-width: 75%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .footer-accordion{
+        margin-right: 68px;
+        flex-basis: 25%;
+        max-width: 25%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+    .footer-location-section{
+        margin-left: 8.33333333%;
+        flex-basis: 16.66666667%;
+        max-width: 16.66666667%;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-bottom: unset;
     }
 }
